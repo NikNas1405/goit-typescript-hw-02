@@ -14,14 +14,18 @@ type User = {
   password: string;
 };
 
-function createOrUpdateUser(initialValues: Partial<User>) {
-  // Оновлення користувача
+function createOrUpdateUser(initialValues: Partial<User>): User {
+  // Оновлення користувача:
+
+  //1 заповнення дефолтними даними
   const defaultUser: User = {
     name: "",
     surname: "",
     email: "",
     password: "",
   };
+
+  // 2 З'єднуємо дані користувача та значення за замовчуванням
   return { ...defaultUser, ...initialValues };
 }
 
