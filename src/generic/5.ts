@@ -3,13 +3,9 @@
   Використовуйте generics, щоб цей інтерфейс міг працювати з будь-якими типами ключів та значень.
 */
 
-interface KeyValuePair<TKey, TValue> {
-  key: TKey;
-  value: TValue;
+interface KeyValuePair<K, V> {
+  key: K;
+  value: V;
 }
-
-const one: KeyValuePair<string, number> = { key: "one", value: 10 };
-const two: KeyValuePair<string, string> = { key: "two", value: "15" };
-const three: KeyValuePair<string, boolean> = { key: "three", value: true };
 
 export {};
