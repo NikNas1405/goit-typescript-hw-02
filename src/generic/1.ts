@@ -14,3 +14,16 @@ getPromise().then((data) => {
 });
 
 export {};
+
+// or
+// function getPromise<Format>() {
+//   return new Promise<Format>((resolve) => {
+//     resolve(["Text", 50] as Format);
+//   });
+// }
+
+// getPromise<[string | number]>().then((data) => {
+//   console.log(data);
+// });
+
+// export {};
